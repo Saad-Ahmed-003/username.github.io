@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sigma PC Builds</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #1f1f1f, #2b2b2b);
+      color: white;
+      line-height: 1.6;
+    }
+
+    main {
+      flex: 1;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #1e1e2e;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .navbar .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #b983ff;
+    }
+
+    .navbar .nav-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .navbar .nav-links a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .navbar .nav-links a:hover {
+      color: #b983ff;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 4rem 1rem;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      color: #b983ff;
+    }
+
+    .hero p {
+      margin: 1.5rem 0;
+      font-size: 1.2rem;
+    }
+
+    .hero .cta-btn {
+      display: inline-block;
+      padding: 0.8rem 2rem;
+      background: #b983ff;
+      color: #1e1e2e;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .hero .cta-btn:hover {
+      background: #9a68e8;
+      transform: scale(1.05);
+    }
+
+    /* Features Section */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+      margin-top: 2rem;
+    }
+
+    .feature-card {
+      background: #2b2b2b;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+
+    .feature-card h3 {
+      color: #b983ff;
+      margin-bottom: 1rem;
+    }
+
+    .feature-card p {
+      font-size: 1rem;
+    }
+
+    .feature-card:hover {
+      transform: scale(1.05);
+      transition: transform 0.3s ease;
+    }
+
+    /* Testimonials Section */
+    .testimonials {
+      padding: 2rem 1rem;
+      background: #1e1e2e;
+      color: white;
+      text-align: center;
+    }
+
+    .testimonials h2 {
+      color: #b983ff;
+      margin-bottom: 1rem;
+    }
+
+    .testimonial {
+      font-style: italic;
+      margin: 1rem 0;
+    }
+
+    /* FAQ Section */
+    .faq {
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .faq h2 {
+      color: #b983ff;
+      margin-bottom: 1rem;
+    }
+
+    .faq p {
+      margin: 0.5rem 0;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #1e1e2e;
+      color: white;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">Sigma PC Builds</div>
+    <div class="nav-links">
+      <a href="#builds">Pre-Built PCs</a>
+      <a href="#custom">Custom Builds</a>
+      <a href="#help">Help Me Choose</a>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1>W-Riz Your PC</h1>
+      <p>Take your PC building game to the next level with Sigma PC Builds. We’ve got everything to make your dream setup come true.</p>
+      <a href="#features" class="cta-btn">Get Started</a>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+      <div class="feature-card">
+        <h3>Pre-Built PCs</h3>
+        <p>Pick from our expertly designed pre-built PCs for top-tier gaming and productivity.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Custom Builds</h3>
+        <p>Customize your PC with our easy-to-use tools and guidance for every step.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Help Me Choose</h3>
+        <p>Not sure where to start? Let us guide you to the perfect PC for your needs.</p>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+      <h2>What Our Customers Say</h2>
+      <p class="testimonial">"Sigma PC Builds gave my setup the ultimate glow-up!" - Alex</p>
+      <p class="testimonial">"I loved how easy it was to build my dream PC!" - Jamie</p>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+      <h2>FAQs</h2>
+      <p><strong>Q:</strong> Can I get guidance on choosing components?</p>
+      <p><strong>A:</strong> Absolutely! We’re here to help you every step of the way.</p>
+      <p><strong>Q:</strong> Do you ship pre-built PCs internationally?</p>
+      <p><strong>A:</strong> Yes, we offer international shipping.</p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Sigma PC Builds. All rights reserved.
+  </footer>
+</body>
+</html>
