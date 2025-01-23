@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sigma PC Builds</title>
+  <title>Aura Builds</title>
   <style>
     /* General Reset */
     * {
@@ -12,16 +12,16 @@
       box-sizing: border-box;
     }
 
-    body {
-      display: flex;
-      flex-direction: column;
-    }
-
-    body {
+    html, body {
+      height: 100%;
       font-family: 'Arial', sans-serif;
       background: linear-gradient(135deg, #1f1f1f, #2b2b2b);
       color: white;
-      line-height: 1.6;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
     }
 
     main {
@@ -30,23 +30,26 @@
 
     /* Navbar */
     .navbar {
-      background-color: #1e1e2e;
+      background-color: rgba(30, 30, 46, 0.9);
       padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
     }
 
     .navbar .logo {
-      font-size: 1.5rem;
+      font-size: 1.8rem;
       font-weight: bold;
       color: #b983ff;
     }
 
     .navbar .nav-links {
       display: flex;
-      gap: 1.5rem;
+      gap: 2rem;
     }
 
     .navbar .nav-links a {
@@ -67,30 +70,34 @@
     }
 
     .hero h1 {
-      font-size: 3rem;
-      color: #b983ff;
+      font-size: 4rem;
+      background: linear-gradient(90deg, #b983ff, #9a68e8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 1rem;
     }
 
     .hero p {
       margin: 1.5rem 0;
-      font-size: 1.2rem;
+      font-size: 1.5rem;
+      color: #c9c9c9;
     }
 
     .hero .cta-btn {
       display: inline-block;
-      padding: 0.8rem 2rem;
+      padding: 1rem 2rem;
       background: #b983ff;
       color: #1e1e2e;
       text-decoration: none;
       font-weight: bold;
-      border-radius: 5px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      border-radius: 50px;
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
       transition: background 0.3s ease, transform 0.2s ease;
     }
 
     .hero .cta-btn:hover {
       background: #9a68e8;
-      transform: scale(1.05);
+      transform: translateY(-5px);
     }
 
     /* Features Section */
@@ -98,130 +105,167 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 2rem;
-      padding: 2rem;
-      margin-top: 2rem;
+      padding: 4rem 2rem;
     }
 
     .feature-card {
-      background: #2b2b2b;
-      padding: 1.5rem;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      background: linear-gradient(135deg, #292929, #1f1f1f);
+      padding: 2rem;
+      border-radius: 15px;
       text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .feature-card h3 {
+      font-size: 1.8rem;
       color: #b983ff;
       margin-bottom: 1rem;
     }
 
     .feature-card p {
-      font-size: 1rem;
+      font-size: 1.1rem;
+      color: #d1d1d1;
     }
 
     .feature-card:hover {
-      transform: scale(1.05);
-      transition: transform 0.3s ease;
+      transform: translateY(-10px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
     }
 
-    /* Testimonials Section */
-    .testimonials {
-      padding: 2rem 1rem;
-      background: #1e1e2e;
-      color: white;
+    /* Why Aura Builds Section */
+    .why-aura {
+      padding: 4rem 2rem;
       text-align: center;
+    }
+
+    .why-aura h2 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      color: #b983ff;
+    }
+
+    .why-aura p {
+      font-size: 1.3rem;
+      color: #c9c9c9;
+      margin-bottom: 2rem;
+    }
+
+    /* Testimonials */
+    .testimonials {
+      padding: 4rem 2rem;
+      background: #1b1b1b;
     }
 
     .testimonials h2 {
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 2rem;
       color: #b983ff;
-      margin-bottom: 1rem;
     }
 
     .testimonial {
-      font-style: italic;
-      margin: 1rem 0;
-    }
-
-    /* FAQ Section */
-    .faq {
-      padding: 2rem;
       text-align: center;
-    }
-
-    .faq h2 {
-      color: #b983ff;
-      margin-bottom: 1rem;
-    }
-
-    .faq p {
-      margin: 0.5rem 0;
+      margin: 1rem auto;
+      max-width: 700px;
+      font-style: italic;
+      color: #d1d1d1;
     }
 
     /* Footer */
     footer {
+      background: rgba(30, 30, 46, 0.9);
+      padding: 2rem 1rem;
       text-align: center;
-      padding: 1rem;
-      background: #1e1e2e;
-      color: white;
       font-size: 0.9rem;
+      color: white;
+      margin-top: auto;
+    }
+
+    footer .newsletter {
+      margin: 2rem 0;
+    }
+
+    footer input[type="email"] {
+      padding: 0.7rem;
+      border: none;
+      border-radius: 50px;
+      margin-right: 0.5rem;
+      width: 300px;
+    }
+
+    footer button {
+      padding: 0.7rem 1.5rem;
+      border: none;
+      background: #b983ff;
+      color: #1e1e2e;
+      border-radius: 50px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    footer button:hover {
+      background: #9a68e8;
     }
   </style>
 </head>
 <body>
   <!-- Navbar -->
   <nav class="navbar">
-    <div class="logo">Sigma PC Builds</div>
+    <div class="logo">Aura Builds</div>
     <div class="nav-links">
-      <a href="#builds">Pre-Built PCs</a>
+      <a href="#features">Pre-Built PCs</a>
       <a href="#custom">Custom Builds</a>
       <a href="#help">Help Me Choose</a>
     </div>
   </nav>
 
+  <!-- Hero Section -->
   <main>
-    <!-- Hero Section -->
     <section class="hero">
-      <h1>W-Riz Your PC</h1>
-      <p>Take your PC building game to the next level with Sigma PC Builds. We’ve got everything to make your dream setup come true.</p>
-      <a href="#features" class="cta-btn">Get Started</a>
+      <h1>Build Your Aura</h1>
+      <p>Your dream setup is just a click away. Level up your vibe, style, and gaming aura.</p>
+      <a href="#features" class="cta-btn">Start Building</a>
     </section>
 
     <!-- Features Section -->
-    <section id="features" class="features">
+    <section class="features" id="features">
       <div class="feature-card">
-        <h3>Pre-Built PCs</h3>
-        <p>Pick from our expertly designed pre-built PCs for top-tier gaming and productivity.</p>
+        <h3>Pre-Built Perfection</h3>
+        <p>Handpicked and pre-assembled PCs that radiate excellence.</p>
       </div>
       <div class="feature-card">
-        <h3>Custom Builds</h3>
-        <p>Customize your PC with our easy-to-use tools and guidance for every step.</p>
+        <h3>Custom Aura</h3>
+        <p>Design your own PC with parts that match your style and energy.</p>
       </div>
       <div class="feature-card">
         <h3>Help Me Choose</h3>
-        <p>Not sure where to start? Let us guide you to the perfect PC for your needs.</p>
+        <p>Not sure where to start? Let our experts guide you.</p>
       </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section class="testimonials">
-      <h2>What Our Customers Say</h2>
-      <p class="testimonial">"Sigma PC Builds gave my setup the ultimate glow-up!" - Alex</p>
-      <p class="testimonial">"I loved how easy it was to build my dream PC!" - Jamie</p>
+    <!-- Why Aura Builds Section -->
+    <section class="why-aura" id="custom">
+      <h2>Why Aura Builds?</h2>
+      <p>Because ordinary is boring. Build PCs that are as unique as you are.</p>
     </section>
 
-    <!-- FAQ Section -->
-    <section class="faq">
-      <h2>FAQs</h2>
-      <p><strong>Q:</strong> Can I get guidance on choosing components?</p>
-      <p><strong>A:</strong> Absolutely! We’re here to help you every step of the way.</p>
-      <p><strong>Q:</strong> Do you ship pre-built PCs internationally?</p>
-      <p><strong>A:</strong> Yes, we offer international shipping.</p>
+    <!-- Testimonials -->
+    <section class="testimonials" id="help">
+      <h2>What Our Customers Say</h2>
+      <p class="testimonial">"Aura Builds transformed my gaming setup into a literal dream! It's fire!"</p>
+      <p class="testimonial">"The custom build process was so smooth, and now my PC vibes with my aura."</p>
     </section>
   </main>
 
   <!-- Footer -->
   <footer>
-    &copy; 2025 Sigma PC Builds. All rights reserved.
+    <p>&copy; 2025 Aura Builds. All rights reserved.</p>
+    <div class="newsletter">
+      <input type="email" placeholder="Stay Vibin' - Enter your email">
+      <button>Subscribe</button>
+    </div>
   </footer>
 </body>
 </html>
