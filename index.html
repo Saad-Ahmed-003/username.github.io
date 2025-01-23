@@ -133,6 +133,45 @@
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
     }
 
+    /* FAQ Section */
+    .faq {
+      padding: 4rem 2rem;
+    }
+
+    .faq h2 {
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #b983ff;
+    }
+
+    .faq-item {
+      margin: 1rem 0;
+    }
+
+    .faq-question {
+      background: #292929;
+      padding: 1rem;
+      border-radius: 8px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      position: relative;
+      color: #c9c9c9;
+    }
+
+    .faq-question:hover {
+      background: #353535;
+    }
+
+    .faq-answer {
+      padding: 1rem;
+      margin-top: 0.5rem;
+      background: #1f1f1f;
+      border-radius: 8px;
+      display: none;
+      color: #d1d1d1;
+    }
+
     /* Why Aura Builds Section */
     .why-aura {
       padding: 4rem 2rem;
@@ -225,37 +264,53 @@
   <main>
     <section class="hero">
       <h1>Build Your Aura</h1>
-      <p>Your dream setup is just a click away. Level up your vibe, style, and gaming aura.</p>
-      <a href="#features" class="cta-btn">Start Building</a>
+      <p>Your setup isn’t just a vibe – it’s a statement. Let’s make it ICONIC.</p>
+      <a href="#features" class="cta-btn">Glow Up Your Setup</a>
     </section>
 
     <!-- Features Section -->
     <section class="features" id="features">
       <div class="feature-card">
         <h3>Pre-Built Perfection</h3>
-        <p>Handpicked and pre-assembled PCs that radiate excellence.</p>
+        <p>Our PCs are plug-and-play legends. Straight fire, no cap.</p>
       </div>
       <div class="feature-card">
         <h3>Custom Aura</h3>
-        <p>Design your own PC with parts that match your style and energy.</p>
+        <p>Pick parts. Pick vibes. Create a beast that screams YOU.</p>
       </div>
       <div class="feature-card">
         <h3>Help Me Choose</h3>
-        <p>Not sure where to start? Let our experts guide you.</p>
+        <p>Lost in the sauce? We got you. Let’s vibe-check your dream setup.</p>
       </div>
     </section>
 
-    <!-- Why Aura Builds Section -->
     <section class="why-aura" id="custom">
       <h2>Why Aura Builds?</h2>
-      <p>Because ordinary is boring. Build PCs that are as unique as you are.</p>
+      <p>Ordinary PCs are mid. Build something lit, build something YOU.</p>
     </section>
-
+  
     <!-- Testimonials -->
     <section class="testimonials" id="help">
       <h2>What Our Customers Say</h2>
-      <p class="testimonial">"Aura Builds transformed my gaming setup into a literal dream! It's fire!"</p>
-      <p class="testimonial">"The custom build process was so smooth, and now my PC vibes with my aura."</p>
+      <p class="testimonial">"Aura Builds didn’t just build a PC – they built my kingdom. Big W energy!"</p>
+      <p class="testimonial">"This isn’t just a setup, it’s a flex. Aura Builds understood the assignment."</p>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+      <h2>FAQs</h2>
+      <div class="faq-item">
+        <div class="faq-question">What’s the deal with Aura Builds?</div>
+        <div class="faq-answer">Aura Builds is all about crafting PCs that don’t just perform but SLAY. Your dream setup starts here.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Can I customize every part?</div>
+        <div class="faq-answer">Absolutely! From RGB to the GPU, your PC, your rules.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Is it expensive?</div>
+        <div class="faq-answer">We make sure you get the most bang for your buck. Quality, vibes, and affordability.</div>
+      </div>
     </section>
   </main>
 
@@ -267,5 +322,14 @@
       <button>Subscribe</button>
     </div>
   </footer>
+
+  <script>
+    document.querySelectorAll('.faq-question').forEach((item) => {
+      item.addEventListener('click', () => {
+        const answer = item.nextElementSibling;
+        answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+      });
+    });
+  </script>
 </body>
 </html>
